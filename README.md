@@ -14,6 +14,7 @@ php -r "file_exists('.env') || copy('.env.example', '.env');"
 
 ```php
 php artisan key:generate
+php artisan jwt:secret
 npm install
 ```
 Verander de databasecredentials in je .env file:
