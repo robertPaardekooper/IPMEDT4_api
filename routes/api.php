@@ -17,7 +17,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::group(['middleware' => ['jwt.verify', 'cors.enable']], function() {
+Route::group(['middleware' => ['cors.enable', 'jwt.verify']], function() {
     Route::get('user', 'UserController@getAuthenticatedUser');
 
     // Testding voor reactapp
